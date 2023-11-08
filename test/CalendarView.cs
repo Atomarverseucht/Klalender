@@ -23,11 +23,14 @@ namespace test
         }
         public void MonthCalendarView(int month, int year)
         {
+            DateTime firstDate = new DateTime(year,month, 1);
             // frägt Anfangstag ab / frägt Anzahl der Tage ab
-            int startDay = Convert.ToInt16(DateTime.Parse(month.ToString()).DayOfWeek) ;
+            int startDay = Convert.ToInt16(DateTime.Parse(firstDate.ToString()).DayOfWeek) ;
             int lastDay = Convert.ToInt16(DateTime.DaysInMonth(year, month));
 
             // Anzeige
+            button3.Text = startDay.ToString();
         }
+
     }
 }
