@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tlpCalendar = new System.Windows.Forms.TableLayoutPanel();
             this.lbMonday = new System.Windows.Forms.Label();
             this.lbTuesday = new System.Windows.Forms.Label();
             this.lbWednesday = new System.Windows.Forms.Label();
@@ -36,120 +35,81 @@
             this.lbFriday = new System.Windows.Forms.Label();
             this.lbSaturday = new System.Windows.Forms.Label();
             this.lbSunday = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tlpCalendar
-            // 
-            this.tlpCalendar.AutoSize = true;
-            this.tlpCalendar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tlpCalendar.ColumnCount = 7;
-            this.tlpCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tlpCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tlpCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tlpCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tlpCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tlpCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tlpCalendar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
-            this.tlpCalendar.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tlpCalendar.Location = new System.Drawing.Point(58, 154);
-            this.tlpCalendar.Name = "tlpCalendar";
-            this.tlpCalendar.RowCount = 6;
-            this.tlpCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tlpCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66666F));
-            this.tlpCalendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlpCalendar.Size = new System.Drawing.Size(0, 0);
-            this.tlpCalendar.TabIndex = 0;
+
             // 
             // lbMonday
             // 
             this.lbMonday.AutoSize = true;
-            this.lbMonday.Location = new System.Drawing.Point(66, 102);
+            this.lbMonday.Location = new System.Drawing.Point(33, 53);
+            this.lbMonday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbMonday.Name = "lbMonday";
-            this.lbMonday.Size = new System.Drawing.Size(89, 25);
+            this.lbMonday.Size = new System.Drawing.Size(45, 13);
             this.lbMonday.TabIndex = 1;
             this.lbMonday.Text = "Monday";
             // 
             // lbTuesday
             // 
             this.lbTuesday.AutoSize = true;
-            this.lbTuesday.Location = new System.Drawing.Point(313, 101);
+            this.lbTuesday.Location = new System.Drawing.Point(156, 53);
+            this.lbTuesday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTuesday.Name = "lbTuesday";
-            this.lbTuesday.Size = new System.Drawing.Size(95, 25);
+            this.lbTuesday.Size = new System.Drawing.Size(48, 13);
             this.lbTuesday.TabIndex = 2;
             this.lbTuesday.Text = "Tuesday";
             // 
             // lbWednesday
             // 
             this.lbWednesday.AutoSize = true;
-            this.lbWednesday.Location = new System.Drawing.Point(551, 100);
+            this.lbWednesday.Location = new System.Drawing.Point(276, 52);
+            this.lbWednesday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbWednesday.Name = "lbWednesday";
-            this.lbWednesday.Size = new System.Drawing.Size(126, 25);
+            this.lbWednesday.Size = new System.Drawing.Size(64, 13);
             this.lbWednesday.TabIndex = 3;
             this.lbWednesday.Text = "Wednesday";
             // 
             // lbThursday
             // 
             this.lbThursday.AutoSize = true;
-            this.lbThursday.Location = new System.Drawing.Point(791, 101);
+            this.lbThursday.Location = new System.Drawing.Point(396, 53);
+            this.lbThursday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbThursday.Name = "lbThursday";
-            this.lbThursday.Size = new System.Drawing.Size(102, 25);
+            this.lbThursday.Size = new System.Drawing.Size(51, 13);
             this.lbThursday.TabIndex = 4;
             this.lbThursday.Text = "Thursday";
             // 
             // lbFriday
             // 
             this.lbFriday.AutoSize = true;
-            this.lbFriday.Location = new System.Drawing.Point(1065, 102);
+            this.lbFriday.Location = new System.Drawing.Point(532, 53);
+            this.lbFriday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbFriday.Name = "lbFriday";
-            this.lbFriday.Size = new System.Drawing.Size(72, 25);
+            this.lbFriday.Size = new System.Drawing.Size(35, 13);
             this.lbFriday.TabIndex = 5;
             this.lbFriday.Text = "Friday";
             // 
             // lbSaturday
             // 
             this.lbSaturday.AutoSize = true;
-            this.lbSaturday.Location = new System.Drawing.Point(1294, 102);
+            this.lbSaturday.Location = new System.Drawing.Point(647, 53);
+            this.lbSaturday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSaturday.Name = "lbSaturday";
-            this.lbSaturday.Size = new System.Drawing.Size(98, 25);
+            this.lbSaturday.Size = new System.Drawing.Size(49, 13);
             this.lbSaturday.TabIndex = 6;
             this.lbSaturday.Text = "Saturday";
             // 
             // lbSunday
             // 
             this.lbSunday.AutoSize = true;
-            this.lbSunday.Location = new System.Drawing.Point(1541, 100);
+            this.lbSunday.Location = new System.Drawing.Point(770, 52);
+            this.lbSunday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSunday.Name = "lbSunday";
-            this.lbSunday.Size = new System.Drawing.Size(85, 25);
+            this.lbSunday.Size = new System.Drawing.Size(43, 13);
             this.lbSunday.TabIndex = 7;
             this.lbSunday.Text = "Sunday";
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.Location = new System.Drawing.Point(145, 580);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(6, 6);
-            this.button1.TabIndex = 1;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(239, 499);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(0, 0);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -165,7 +125,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.Controls.Add(this.button3, 0, 0);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(58, 174);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(29, 84);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -174,28 +135,27 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1666, 810);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(833, 432);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(5, 3);
+            this.button3.Location = new System.Drawing.Point(2, 24);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(227, 129);
+            this.button3.Size = new System.Drawing.Size(114, 23);
             this.button3.TabIndex = 0;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // CalendarView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1788, 1058);
+            this.ClientSize = new System.Drawing.Size(894, 550);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.lbSunday);
             this.Controls.Add(this.lbSaturday);
             this.Controls.Add(this.lbFriday);
@@ -203,7 +163,7 @@
             this.Controls.Add(this.lbWednesday);
             this.Controls.Add(this.lbTuesday);
             this.Controls.Add(this.lbMonday);
-            this.Controls.Add(this.tlpCalendar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CalendarView";
             this.Text = "CalendarView";
             this.Load += new System.EventHandler(this.CalendarView_Load);
@@ -216,7 +176,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tlpCalendar;
         private System.Windows.Forms.Label lbMonday;
         private System.Windows.Forms.Label lbTuesday;
         private System.Windows.Forms.Label lbWednesday;
