@@ -21,7 +21,7 @@ namespace test
         private void Form1_Load(object sender, EventArgs e)
         {
             dtbDate.MinDate = DateTime.Now;
-            CalendarView cw = new CalendarView();
+            Calendar cw = new Calendar();
             cw.Show();
         }
 

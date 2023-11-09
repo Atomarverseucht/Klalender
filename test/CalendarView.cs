@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace test
 {
-    public partial class CalendarView : Form
+    public partial class Calendar : Form
     {
-        public CalendarView()
+        public Calendar()
         {
             InitializeComponent();
         }
@@ -29,8 +29,17 @@ namespace test
             int lastDay = Convert.ToInt16(DateTime.DaysInMonth(year, month));
 
             // Anzeige
-            button3.Text = startDay.ToString();
+
         }
 
+        private void tmUpdate_Tick(object sender, EventArgs e)
+        {
+            resizeCalendar();
+        }
+        public void resizeCalendar()
+        {
+            tlpCalendar.Width = this.Width - 80;
+            tlpCalendar.Height = this.Height - 150;
+        }
     }
 }
