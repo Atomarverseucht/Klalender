@@ -35,7 +35,7 @@ namespace test
             {
                 startDay = 6;
             }
-            lbInfo.Text = "Calendar of " + month.ToString()+ "/" + year.ToString()+" Starttag: "+startDay;
+            lbInfo.Text = "Calendar of " + month.ToString()+ "/" + year.ToString();
             // Anzeige
             for(int i = 1; i <= 42; i++)
             {

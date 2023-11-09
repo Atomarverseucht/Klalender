@@ -73,13 +73,13 @@
             this.rtbCalendar03 = new System.Windows.Forms.RichTextBox();
             this.rtbCalendar02 = new System.Windows.Forms.RichTextBox();
             this.rtbCalendar01 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.rtbHead7 = new System.Windows.Forms.RichTextBox();
+            this.rtbHead6 = new System.Windows.Forms.RichTextBox();
+            this.rtbHead5 = new System.Windows.Forms.RichTextBox();
+            this.rtbHead4 = new System.Windows.Forms.RichTextBox();
+            this.rtbHead3 = new System.Windows.Forms.RichTextBox();
+            this.rtbHead1 = new System.Windows.Forms.RichTextBox();
+            this.rtbHead2 = new System.Windows.Forms.RichTextBox();
             this.btNext = new System.Windows.Forms.Button();
             this.btLast = new System.Windows.Forms.Button();
             this.lbInfo = new System.Windows.Forms.Label();
@@ -143,13 +143,13 @@
             this.tlpCalendar.Controls.Add(this.rtbCalendar03, 2, 1);
             this.tlpCalendar.Controls.Add(this.rtbCalendar02, 1, 1);
             this.tlpCalendar.Controls.Add(this.rtbCalendar01, 0, 1);
-            this.tlpCalendar.Controls.Add(this.richTextBox6, 6, 0);
-            this.tlpCalendar.Controls.Add(this.richTextBox5, 5, 0);
-            this.tlpCalendar.Controls.Add(this.richTextBox4, 4, 0);
-            this.tlpCalendar.Controls.Add(this.richTextBox3, 3, 0);
-            this.tlpCalendar.Controls.Add(this.richTextBox2, 2, 0);
-            this.tlpCalendar.Controls.Add(this.richTextBox1, 0, 0);
-            this.tlpCalendar.Controls.Add(this.richTextBox7, 1, 0);
+            this.tlpCalendar.Controls.Add(this.rtbHead7, 6, 0);
+            this.tlpCalendar.Controls.Add(this.rtbHead6, 5, 0);
+            this.tlpCalendar.Controls.Add(this.rtbHead5, 4, 0);
+            this.tlpCalendar.Controls.Add(this.rtbHead4, 3, 0);
+            this.tlpCalendar.Controls.Add(this.rtbHead3, 2, 0);
+            this.tlpCalendar.Controls.Add(this.rtbHead1, 0, 0);
+            this.tlpCalendar.Controls.Add(this.rtbHead2, 1, 0);
             this.tlpCalendar.Location = new System.Drawing.Point(36, 56);
             this.tlpCalendar.Name = "tlpCalendar";
             this.tlpCalendar.RowCount = 7;
@@ -584,83 +584,83 @@
             this.rtbCalendar01.TabIndex = 7;
             this.rtbCalendar01.Text = "";
             // 
-            // richTextBox6
+            // rtbHead7
             // 
-            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox6.Location = new System.Drawing.Point(1047, 3);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.ReadOnly = true;
-            this.richTextBox6.Size = new System.Drawing.Size(172, 24);
-            this.richTextBox6.TabIndex = 6;
-            this.richTextBox6.Text = "Sunday";
+            this.rtbHead7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbHead7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbHead7.Location = new System.Drawing.Point(1047, 3);
+            this.rtbHead7.Name = "rtbHead7";
+            this.rtbHead7.ReadOnly = true;
+            this.rtbHead7.Size = new System.Drawing.Size(172, 24);
+            this.rtbHead7.TabIndex = 6;
+            this.rtbHead7.Text = "Sunday";
             // 
-            // richTextBox5
+            // rtbHead6
             // 
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox5.Location = new System.Drawing.Point(873, 3);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.ReadOnly = true;
-            this.richTextBox5.Size = new System.Drawing.Size(168, 24);
-            this.richTextBox5.TabIndex = 5;
-            this.richTextBox5.Text = "Saturday";
+            this.rtbHead6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbHead6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbHead6.Location = new System.Drawing.Point(873, 3);
+            this.rtbHead6.Name = "rtbHead6";
+            this.rtbHead6.ReadOnly = true;
+            this.rtbHead6.Size = new System.Drawing.Size(168, 24);
+            this.rtbHead6.TabIndex = 5;
+            this.rtbHead6.Text = "Saturday";
             // 
-            // richTextBox4
+            // rtbHead5
             // 
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox4.Location = new System.Drawing.Point(699, 3);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.ReadOnly = true;
-            this.richTextBox4.Size = new System.Drawing.Size(168, 24);
-            this.richTextBox4.TabIndex = 4;
-            this.richTextBox4.Text = "Friday";
+            this.rtbHead5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbHead5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbHead5.Location = new System.Drawing.Point(699, 3);
+            this.rtbHead5.Name = "rtbHead5";
+            this.rtbHead5.ReadOnly = true;
+            this.rtbHead5.Size = new System.Drawing.Size(168, 24);
+            this.rtbHead5.TabIndex = 4;
+            this.rtbHead5.Text = "Friday";
             // 
-            // richTextBox3
+            // rtbHead4
             // 
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox3.Location = new System.Drawing.Point(525, 3);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(168, 24);
-            this.richTextBox3.TabIndex = 3;
-            this.richTextBox3.Text = "Thursday";
+            this.rtbHead4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbHead4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbHead4.Location = new System.Drawing.Point(525, 3);
+            this.rtbHead4.Name = "rtbHead4";
+            this.rtbHead4.ReadOnly = true;
+            this.rtbHead4.Size = new System.Drawing.Size(168, 24);
+            this.rtbHead4.TabIndex = 3;
+            this.rtbHead4.Text = "Thursday";
             // 
-            // richTextBox2
+            // rtbHead3
             // 
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.CausesValidation = false;
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(351, 3);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.Size = new System.Drawing.Size(168, 24);
-            this.richTextBox2.TabIndex = 2;
-            this.richTextBox2.Text = "Wednesday";
+            this.rtbHead3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbHead3.CausesValidation = false;
+            this.rtbHead3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbHead3.Location = new System.Drawing.Point(351, 3);
+            this.rtbHead3.Name = "rtbHead3";
+            this.rtbHead3.ReadOnly = true;
+            this.rtbHead3.Size = new System.Drawing.Size(168, 24);
+            this.rtbHead3.TabIndex = 2;
+            this.rtbHead3.Text = "Wednesday";
             // 
-            // richTextBox1
+            // rtbHead1
             // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(168, 24);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "Monday";
+            this.rtbHead1.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbHead1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbHead1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbHead1.Location = new System.Drawing.Point(3, 3);
+            this.rtbHead1.Name = "rtbHead1";
+            this.rtbHead1.ReadOnly = true;
+            this.rtbHead1.Size = new System.Drawing.Size(168, 24);
+            this.rtbHead1.TabIndex = 1;
+            this.rtbHead1.Text = "Monday";
             // 
-            // richTextBox7
+            // rtbHead2
             // 
-            this.richTextBox7.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox7.Location = new System.Drawing.Point(177, 3);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(168, 24);
-            this.richTextBox7.TabIndex = 49;
-            this.richTextBox7.Text = "Tuesday";
+            this.rtbHead2.BackColor = System.Drawing.SystemColors.Control;
+            this.rtbHead2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbHead2.Location = new System.Drawing.Point(177, 3);
+            this.rtbHead2.Name = "rtbHead2";
+            this.rtbHead2.Size = new System.Drawing.Size(168, 24);
+            this.rtbHead2.TabIndex = 49;
+            this.rtbHead2.Text = "Tuesday";
             // 
             // btNext
             // 
@@ -753,12 +753,12 @@
         private System.Windows.Forms.RichTextBox rtbCalendar03;
         private System.Windows.Forms.RichTextBox rtbCalendar02;
         private System.Windows.Forms.RichTextBox rtbCalendar01;
-        private System.Windows.Forms.RichTextBox richTextBox6;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbHead7;
+        private System.Windows.Forms.RichTextBox rtbHead6;
+        private System.Windows.Forms.RichTextBox rtbHead5;
+        private System.Windows.Forms.RichTextBox rtbHead4;
+        private System.Windows.Forms.RichTextBox rtbHead3;
+        private System.Windows.Forms.RichTextBox rtbHead1;
         private System.Windows.Forms.RichTextBox rtbCalendar38;
         private System.Windows.Forms.RichTextBox rtbCalendar37;
         private System.Windows.Forms.RichTextBox rtbCalendar36;
@@ -766,7 +766,7 @@
         private System.Windows.Forms.RichTextBox rtbCalendar42;
         private System.Windows.Forms.RichTextBox rtbCalendar41;
         private System.Windows.Forms.RichTextBox rtbCalendar40;
-        private System.Windows.Forms.RichTextBox richTextBox7;
+        private System.Windows.Forms.RichTextBox rtbHead2;
         private System.Windows.Forms.Button btNext;
         private System.Windows.Forms.Button btLast;
         private System.Windows.Forms.Label lbInfo;
