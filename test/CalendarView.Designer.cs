@@ -80,6 +80,9 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.btNext = new System.Windows.Forms.Button();
+            this.btLast = new System.Windows.Forms.Button();
+            this.lbInfo = new System.Windows.Forms.Label();
             this.tlpCalendar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -659,11 +662,48 @@
             this.richTextBox7.TabIndex = 49;
             this.richTextBox7.Text = "Tuesday";
             // 
+            // btNext
+            // 
+            this.btNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btNext.Location = new System.Drawing.Point(1083, 11);
+            this.btNext.Name = "btNext";
+            this.btNext.Size = new System.Drawing.Size(175, 23);
+            this.btNext.TabIndex = 9;
+            this.btNext.Text = "nächster Monat   ----->";
+            this.btNext.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btNext.UseVisualStyleBackColor = true;
+            this.btNext.Click += new System.EventHandler(this.btNext_Click);
+            // 
+            // btLast
+            // 
+            this.btLast.Location = new System.Drawing.Point(36, 11);
+            this.btLast.Name = "btLast";
+            this.btLast.Size = new System.Drawing.Size(171, 24);
+            this.btLast.TabIndex = 10;
+            this.btLast.Text = "<-----    letzter Monat";
+            this.btLast.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLast.UseVisualStyleBackColor = true;
+            this.btLast.Click += new System.EventHandler(this.btLast_Click);
+            // 
+            // lbInfo
+            // 
+            this.lbInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbInfo.AutoSize = true;
+            this.lbInfo.Location = new System.Drawing.Point(558, 11);
+            this.lbInfo.Name = "lbInfo";
+            this.lbInfo.Size = new System.Drawing.Size(33, 13);
+            this.lbInfo.TabIndex = 11;
+            this.lbInfo.Text = "lbInfo";
+            // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1341, 684);
+            this.ClientSize = new System.Drawing.Size(1303, 684);
+            this.Controls.Add(this.lbInfo);
+            this.Controls.Add(this.btLast);
+            this.Controls.Add(this.btNext);
             this.Controls.Add(this.tlpCalendar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Calendar";
@@ -671,6 +711,7 @@
             this.Load += new System.EventHandler(this.CalendarView_Load);
             this.tlpCalendar.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -726,5 +767,8 @@
         private System.Windows.Forms.RichTextBox rtbCalendar41;
         private System.Windows.Forms.RichTextBox rtbCalendar40;
         private System.Windows.Forms.RichTextBox richTextBox7;
+        private System.Windows.Forms.Button btNext;
+        private System.Windows.Forms.Button btLast;
+        private System.Windows.Forms.Label lbInfo;
     }
 }
