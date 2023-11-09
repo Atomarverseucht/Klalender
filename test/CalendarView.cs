@@ -25,10 +25,10 @@ namespace test
         {
             DateTime firstDate = new DateTime(year,month, 1);
             // frägt Anfangstag ab / frägt Anzahl der Tage ab
-            int startDay = Convert.ToInt16(DateTime.Parse(firstDate.ToString()).DayOfWeek) ;
+            int startDay = Convert.ToInt16(DateTime.Parse(firstDate.ToString()).DayOfWeek) -1 ;
             int lastDay = Convert.ToInt16(DateTime.DaysInMonth(year, month));
 
-            // Anzeige
+            // Anzeige - Code folgt...
             button3.Text = startDay.ToString();
         }
 
