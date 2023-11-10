@@ -33,29 +33,27 @@ namespace test
             int lastDay = Convert.ToInt16(DateTime.DaysInMonth(year, month));
             if (startDay == -1)
             {
-                startDay = 6;
+                startDay = 6;                
+                if(i <= startDay || i + startDay <= lastDay)
+                {
+                    lockCalendar(i, false);
+                }
+                else
+                {
+                    lockCalendar(i, true);
+                }
+            }
             }
             lbInfo.Text = "Calendar of " + month.ToString()+ "/" + year.ToString();
             // Anzeige
             for(int i = 1; i <= 42; i++)
             {
                 writeCalendar("", i);
-                lockCalendar(i, true);
             }
             for(int i = 1; i <= lastDay; i++)
             {
                 writeCalendar(i.ToString(), i + startDay);
-            }
-            tlpCalendar.Visible = true;
-            for (int i = 1; i<= startDay; i++)
-            {
-                lockCalendar(i,false);
-            }
-            for(int i = (lastDay + startDay + 1); i <= 42; i++)
-            {
-                lockCalendar(i,false);
-            }
-            
+            }           
         }
         
 
