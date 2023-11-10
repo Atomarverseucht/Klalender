@@ -40,11 +40,22 @@ namespace test
             for(int i = 1; i <= 42; i++)
             {
                 writeCalendar("", i);
+                lockCalendar(i, true);
             }
             for(int i = 1; i <= lastDay; i++)
             {
                 writeCalendar(i.ToString(), i + startDay);
             }
+            tlpCalendar.Visible = true;
+            for (int i = 1; i<= startDay; i++)
+            {
+                lockCalendar(i,false);
+            }
+            for(int i = (lastDay + startDay + 1); i <= 42; i++)
+            {
+                lockCalendar(i,false);
+            }
+            
         }
         
 
@@ -133,6 +144,55 @@ namespace test
                 case 41: rtbCalendar41.Text = content; break;
                 case 42: rtbCalendar42.Text = content; break;
             }
+        }
+        public void lockCalendar(int id, bool value)
+        {
+                        switch (id)
+            {   
+                default: break;
+                case 1: rtbCalendar01.Visible = value; break;
+                case 2: rtbCalendar02.Visible = value; break;
+                case 3: rtbCalendar03.Visible = value; break;
+                case 4: rtbCalendar04.Visible = value; break;
+                case 5: rtbCalendar05.Visible = value; break;
+                case 6: rtbCalendar06.Visible = value; break;
+                case 7: rtbCalendar07.Visible = value; break;
+                case 8: rtbCalendar08.Visible = value; break;
+                case 9: rtbCalendar09.Visible = value; break;
+                case 10: rtbCalendar10.Visible = value; break;
+                case 11: rtbCalendar11.Visible = value; break;
+                case 12: rtbCalendar12.Visible = value; break;
+                case 13: rtbCalendar13.Visible = value; break;
+                case 14: rtbCalendar14.Visible = value; break;
+                case 15: rtbCalendar15.Visible = value; break;
+                case 16: rtbCalendar16.Visible = value; break;
+                case 17: rtbCalendar17.Visible = value; break;
+                case 18: rtbCalendar18.Visible = value; break;
+                case 19: rtbCalendar19.Visible = value; break;
+                case 20: rtbCalendar20.Visible = value; break;
+                case 21: rtbCalendar21.Visible = value; break;
+                case 22: rtbCalendar22.Visible = value; break;
+                case 23: rtbCalendar23.Visible = value; break;
+                case 24: rtbCalendar24.Visible = value; break;
+                case 25: rtbCalendar25.Visible = value; break;
+                case 26: rtbCalendar26.Visible = value; break;
+                case 27: rtbCalendar27.Visible = value; break;
+                case 28: rtbCalendar28.Visible = value; break;
+                case 29: rtbCalendar29.Visible = value; break;
+                case 30: rtbCalendar30.Visible = value; break;
+                case 31: rtbCalendar31.Visible = value; break;
+                case 32: rtbCalendar32.Visible = value; break;
+                case 33: rtbCalendar33.Visible = value; break;
+                case 34: rtbCalendar34.Visible = value; break;
+                case 35: rtbCalendar35.Visible = value; break;
+                case 36: rtbCalendar36.Visible = value; break;
+                case 37: rtbCalendar37.Visible = value; break;
+                case 38: rtbCalendar38.Visible = value; break;
+                case 39: rtbCalendar39.Visible = value; break;
+                case 40: rtbCalendar40.Visible = value; break;
+                case 41: rtbCalendar41.Visible = value; break;
+                case 42: rtbCalendar42.Visible = value; break;
+            }                                    
         }
     }
 }
