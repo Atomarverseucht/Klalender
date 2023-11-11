@@ -12,61 +12,73 @@ namespace test
 {
     public partial class Calendar : Form
     {
+        // Variabendeklaration für den Zeitraum des Kalenders
         public int year;
         public int month;
+
         public Calendar()
         {
             InitializeComponent();
         }
-
+        // Lade-Methode
         private void CalendarView_Load(object sender, EventArgs e)
         {
             year = Convert.ToInt32(DateTime.Now.Year);
             month = Convert.ToInt32(DateTime.Now.Month);
             MonthCalendarView() ;
         }
+
+        // erstellt die Monatsansicht
         public void MonthCalendarView()
         {
-            DateTime firstDate = new DateTime(year,month, 1);
             // frägt Anfangstag ab / frägt Anzahl der Tage ab
-            int startDay = Convert.ToInt16(DateTime.Parse(firstDate.ToString()).DayOfWeek)-1;
+            int startDay = Convert.ToInt16(DateTime.Parse(new DateTime(year,month, 1).ToString()).DayOfWeek) - 1;
             int lastDay = Convert.ToInt16(DateTime.DaysInMonth(year, month));
+
+            // Da Kalender standardmäßig mit Sonntag anfängt muss bei Sonntag (-1) der Wert auf 6 gesetzt werden um auch in Reihenfolge Mo-So zu sein
             if (startDay == -1)
             {
                 startDay = 6;                
-                if(i <= startDay || i + startDay <= lastDay)
+            }
+            
+            // Anzeige des angezeigten Monats und Jahres
+            lbInfo.Text = "Calendar of " + month.ToString()+ "/" + year.ToString();
+           
+            // Reset der Tabelle und Deaktivierung aller unnötigen Tabellenzellen
+            for(int i = 1; i <= 42; i++)
+            {
+                giveCalendarObject(i).Text = "";
+
+                if(i <= startDay || i >= (lastDay + startDay + 1))
                 {
-                    lockCalendar(i, false);
+                   giveCalendarObject(i).Visible = false; // Deaktiviert unnötige Kalenderzeilen
                 }
                 else
                 {
-                    lockCalendar(i, true);
+                   giveCalendarObject(i).Visible = true; // Aktiviert nötige Kalenderzeilen
                 }
             }
-            }
-            lbInfo.Text = "Calendar of " + month.ToString()+ "/" + year.ToString();
-            // Anzeige
-            for(int i = 1; i <= 42; i++)
-            {
-                writeCalendar("", i);
-            }
+
+            // Durchnummerierung der Monatsansicht
             for(int i = 1; i <= lastDay; i++)
             {
-                writeCalendar(i.ToString(), i + startDay);
+                giveCalendarObject(i + startDay).Text = i.ToString();
             }           
         }
         
-
         private void tmUpdate_Tick(object sender, EventArgs e)
         {
             resizeCalendar();
         }
+
+        // passt Größe auf die aktuelle Skalierung an
         public void resizeCalendar()
         {
             tlpCalendar.Width = this.Width - 80;
             tlpCalendar.Height = this.Height - 150;
         }
 
+        // Zurück bzw. Vorwährtsspringen
         private void btLast_Click(object sender, EventArgs e)
         {
             month--;
@@ -88,109 +100,56 @@ namespace test
             }
             MonthCalendarView();
         }  
-        
-        /// <summary>
-        /// Schreibt in das RTB mit der Zahl ID rein
-        /// </summary>
-        /// <param name="content"></param> 
-        /// <param name="id"></param>
-        public void writeCalendar(string content, int id)
+      
+        // Übergibt die gewüschte RTB mit der [id] weiter
+        public RichTextBox giveCalendarObject(int id)
         {
             switch (id)
             {   
-                default: break;
-                case 1: rtbCalendar01.Text = content; break;
-                case 2: rtbCalendar02.Text = content; break;
-                case 3: rtbCalendar03.Text = content; break;
-                case 4: rtbCalendar04.Text = content; break;
-                case 5: rtbCalendar05.Text = content; break;
-                case 6: rtbCalendar06.Text = content; break;
-                case 7: rtbCalendar07.Text = content; break;
-                case 8: rtbCalendar08.Text = content; break;
-                case 9: rtbCalendar09.Text = content; break;
-                case 10: rtbCalendar10.Text = content; break;
-                case 11: rtbCalendar11.Text = content; break;
-                case 12: rtbCalendar12.Text = content; break;
-                case 13: rtbCalendar13.Text = content; break;
-                case 14: rtbCalendar14.Text = content; break;
-                case 15: rtbCalendar15.Text = content; break;
-                case 16: rtbCalendar16.Text = content; break;
-                case 17: rtbCalendar17.Text = content; break;
-                case 18: rtbCalendar18.Text = content; break;
-                case 19: rtbCalendar19.Text = content; break;
-                case 20: rtbCalendar20.Text = content; break;
-                case 21: rtbCalendar21.Text = content; break;
-                case 22: rtbCalendar22.Text = content; break;
-                case 23: rtbCalendar23.Text = content; break;
-                case 24: rtbCalendar24.Text = content; break;
-                case 25: rtbCalendar25.Text = content; break;
-                case 26: rtbCalendar26.Text = content; break;
-                case 27: rtbCalendar27.Text = content; break;
-                case 28: rtbCalendar28.Text = content; break;
-                case 29: rtbCalendar29.Text = content; break;
-                case 30: rtbCalendar30.Text = content; break;
-                case 31: rtbCalendar31.Text = content; break;
-                case 32: rtbCalendar32.Text = content; break;
-                case 33: rtbCalendar33.Text = content; break;
-                case 34: rtbCalendar34.Text = content; break;
-                case 35: rtbCalendar35.Text = content; break;
-                case 36: rtbCalendar36.Text = content; break;
-                case 37: rtbCalendar37.Text = content; break;
-                case 38: rtbCalendar38.Text = content; break;
-                case 39: rtbCalendar39.Text = content; break;
-                case 40: rtbCalendar40.Text = content; break;
-                case 41: rtbCalendar41.Text = content; break;
-                case 42: rtbCalendar42.Text = content; break;
+                default: return rtbCalendar01; break;
+                case 1: return rtbCalendar01; break;
+                case 2: return rtbCalendar02; break;
+                case 3: return rtbCalendar03; break;
+                case 4: return rtbCalendar04; break;
+                case 5: return rtbCalendar05; break;
+                case 6: return rtbCalendar06; break;
+                case 7: return rtbCalendar07; break;
+                case 8: return rtbCalendar08; break;
+                case 9: return rtbCalendar09; break;
+                case 10: return rtbCalendar10; break;
+                case 11: return rtbCalendar11; break;
+                case 12: return rtbCalendar12; break;
+                case 13: return rtbCalendar13; break;
+                case 14: return rtbCalendar14; break;
+                case 15: return rtbCalendar15; break;
+                case 16: return rtbCalendar16; break;
+                case 17: return rtbCalendar17; break;
+                case 18: return rtbCalendar18; break;
+                case 19: return rtbCalendar19; break;
+                case 20: return rtbCalendar20; break;
+                case 21: return rtbCalendar21; break;
+                case 22: return rtbCalendar22; break;
+                case 23: return rtbCalendar23; break;
+                case 24: return rtbCalendar24; break;
+                case 25: return rtbCalendar25; break;
+                case 26: return rtbCalendar26; break;
+                case 27: return rtbCalendar27; break;
+                case 28: return rtbCalendar28; break;
+                case 29: return rtbCalendar29; break;
+                case 30: return rtbCalendar30; break;
+                case 31: return rtbCalendar31; break;
+                case 32: return rtbCalendar32; break;
+                case 33: return rtbCalendar33; break;
+                case 34: return rtbCalendar34; break;
+                case 35: return rtbCalendar35; break;
+                case 36: return rtbCalendar36; break;
+                case 37: return rtbCalendar37; break;
+                case 38: return rtbCalendar38; break;
+                case 39: return rtbCalendar39; break;
+                case 40: return rtbCalendar40; break;
+                case 41: return rtbCalendar41; break;
+                case 42: return rtbCalendar42; break;
             }
-        }
-        public void lockCalendar(int id, bool value)
-        {
-                        switch (id)
-            {   
-                default: break;
-                case 1: rtbCalendar01.Visible = value; break;
-                case 2: rtbCalendar02.Visible = value; break;
-                case 3: rtbCalendar03.Visible = value; break;
-                case 4: rtbCalendar04.Visible = value; break;
-                case 5: rtbCalendar05.Visible = value; break;
-                case 6: rtbCalendar06.Visible = value; break;
-                case 7: rtbCalendar07.Visible = value; break;
-                case 8: rtbCalendar08.Visible = value; break;
-                case 9: rtbCalendar09.Visible = value; break;
-                case 10: rtbCalendar10.Visible = value; break;
-                case 11: rtbCalendar11.Visible = value; break;
-                case 12: rtbCalendar12.Visible = value; break;
-                case 13: rtbCalendar13.Visible = value; break;
-                case 14: rtbCalendar14.Visible = value; break;
-                case 15: rtbCalendar15.Visible = value; break;
-                case 16: rtbCalendar16.Visible = value; break;
-                case 17: rtbCalendar17.Visible = value; break;
-                case 18: rtbCalendar18.Visible = value; break;
-                case 19: rtbCalendar19.Visible = value; break;
-                case 20: rtbCalendar20.Visible = value; break;
-                case 21: rtbCalendar21.Visible = value; break;
-                case 22: rtbCalendar22.Visible = value; break;
-                case 23: rtbCalendar23.Visible = value; break;
-                case 24: rtbCalendar24.Visible = value; break;
-                case 25: rtbCalendar25.Visible = value; break;
-                case 26: rtbCalendar26.Visible = value; break;
-                case 27: rtbCalendar27.Visible = value; break;
-                case 28: rtbCalendar28.Visible = value; break;
-                case 29: rtbCalendar29.Visible = value; break;
-                case 30: rtbCalendar30.Visible = value; break;
-                case 31: rtbCalendar31.Visible = value; break;
-                case 32: rtbCalendar32.Visible = value; break;
-                case 33: rtbCalendar33.Visible = value; break;
-                case 34: rtbCalendar34.Visible = value; break;
-                case 35: rtbCalendar35.Visible = value; break;
-                case 36: rtbCalendar36.Visible = value; break;
-                case 37: rtbCalendar37.Visible = value; break;
-                case 38: rtbCalendar38.Visible = value; break;
-                case 39: rtbCalendar39.Visible = value; break;
-                case 40: rtbCalendar40.Visible = value; break;
-                case 41: rtbCalendar41.Visible = value; break;
-                case 42: rtbCalendar42.Visible = value; break;
-            }                                    
         }
     }
 }
