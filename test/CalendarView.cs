@@ -15,11 +15,36 @@ namespace test
         // Variabendeklaration für den Zeitraum des Kalenders
         public int year;
         public int month;
+        Form1 form1 = new Form1();
 
         public Calendar()
         {
             InitializeComponent();
         }
+
+        // Zurück bzw. Vorwährtsspringen
+        private void btLast_Click(object sender, EventArgs e)
+        {
+            month--;
+            if(month == 0)
+            {
+                month = 12;
+                year--;
+            }
+            MonthCalendarView();
+        }
+
+        private void btNext_Click(object sender, EventArgs e)
+        {
+            month++;
+            if(month == 13)
+            {
+                month = 1;
+                year++;
+            }
+            MonthCalendarView();
+        } 
+        
         // Lade-Methode
         private void CalendarView_Load(object sender, EventArgs e)
         {
@@ -62,60 +87,40 @@ namespace test
             // Durchnummerierung der Monatsansicht
             for(int i = 1; i <= lastDay; i++)
             {
-                giveCalendarObject(i + startDay).Text = i.ToString();
-            }           
+                int id = i + startDay;
+                giveCalendarObject(id).SelectionFont = new Font(giveCalendarObject(id).Font, FontStyle.Bold);
+                giveCalendarObject(id).Text = i.ToString();
+		        DateTime dt = Convert.ToDateTime(i.ToString()+"."+month.ToString()+"."+year.ToString());
+                int index = Form1.searchEvent(dt);
+                if(index != -1)
+                {
+                giveCalendarObject(i + startDay).Text = giveCalendarObject(i + startDay).Text + "\n\n moin" ;	
+                }
+            }
         }
         
+        // Resize
         private void tmUpdate_Tick(object sender, EventArgs e)
-        {
-            resizeCalendar();
-        }
-
-        // passt Größe auf die aktuelle Skalierung an
-        public void resizeCalendar()
         {
             tlpCalendar.Width = this.Width - 80;
             tlpCalendar.Height = this.Height - 150;
         }
-
-        // Zurück bzw. Vorwährtsspringen
-        private void btLast_Click(object sender, EventArgs e)
-        {
-            month--;
-            if(month == 0)
-            {
-                month = 12;
-                year--;
-            }
-            MonthCalendarView();
-        }
-
-        private void btNext_Click(object sender, EventArgs e)
-        {
-            month++;
-            if(month == 13)
-            {
-                month = 1;
-                year++;
-            }
-            MonthCalendarView();
-        }  
-      
-        // Übergibt die gewüschte RTB mit der [id] weiter
+    
+        // Ansteuerung der RTBs der Tabelle: Gibt die gewüschte RTB mit der [id] weiter
         public RichTextBox giveCalendarObject(int id)
         {
             switch (id)
             {   
                 default: return rtbCalendar01; break;
-                case 1: return rtbCalendar01; break;
-                case 2: return rtbCalendar02; break;
-                case 3: return rtbCalendar03; break;
-                case 4: return rtbCalendar04; break;
-                case 5: return rtbCalendar05; break;
-                case 6: return rtbCalendar06; break;
-                case 7: return rtbCalendar07; break;
-                case 8: return rtbCalendar08; break;
-                case 9: return rtbCalendar09; break;
+                case 01: return rtbCalendar01; break;
+                case 02: return rtbCalendar02; break;
+                case 03: return rtbCalendar03; break;
+                case 04: return rtbCalendar04; break;
+                case 05: return rtbCalendar05; break;
+                case 06: return rtbCalendar06; break;
+                case 07: return rtbCalendar07; break;
+                case 08: return rtbCalendar08; break;
+                case 09: return rtbCalendar09; break;
                 case 10: return rtbCalendar10; break;
                 case 11: return rtbCalendar11; break;
                 case 12: return rtbCalendar12; break;

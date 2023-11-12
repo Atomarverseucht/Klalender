@@ -32,7 +32,7 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.tbTitle = new System.Windows.Forms.TextBox();
-            this.dtbDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.btSave = new System.Windows.Forms.Button();
             this.cbCathegory = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,13 +78,13 @@
             // 
             // dtbDate
             // 
-            this.dtbDate.CausesValidation = false;
-            this.dtbDate.CustomFormat = "";
-            this.dtbDate.Location = new System.Drawing.Point(230, 617);
-            this.dtbDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtbDate.Name = "dtbDate";
-            this.dtbDate.Size = new System.Drawing.Size(592, 31);
-            this.dtbDate.TabIndex = 4;
+            this.dtpDate.CausesValidation = false;
+            this.dtpDate.CustomFormat = "";
+            this.dtpDate.Location = new System.Drawing.Point(230, 617);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDate.Name = "dtbDate";
+            this.dtpDate.Size = new System.Drawing.Size(592, 31);
+            this.dtpDate.TabIndex = 4;
             // 
             // btSave
             // 
@@ -124,7 +124,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbCathegory);
             this.Controls.Add(this.btSave);
-            this.Controls.Add(this.dtbDate);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.tbTitle);
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbTitle);
@@ -144,7 +144,7 @@
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.TextBox tbTitle;
-        private System.Windows.Forms.DateTimePicker dtbDate;
+        private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.ComboBox cbCathegory;
         private System.Windows.Forms.Label label3;

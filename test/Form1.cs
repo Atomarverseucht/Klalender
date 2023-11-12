@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using System.Windows.Forms.Calendar;
 
 namespace test
 {
@@ -17,34 +16,47 @@ namespace test
         {
             InitializeComponent();
         }
-       List<string> events = new List<string>();
+
+        public static List<string> events = new List<string>(); // static, weil einfacher zum Zugreifen
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            dtbDate.MinDate = DateTime.Now;
+            dtpDate.MinDate = DateTime.Now;
             Calendar cw = new Calendar();
             cw.Show();
         }
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            //Form1 form = new Form1();
-              events.Add(dtbDate.Value.Year + "ඞ" + dtbDate.Value.Month + "ඞ" + dtbDate.Value.Day + "ඞ" + tbTitle.Text + "ඞ" + cbCathegory.Text);
+            events.Add(dtpDate.Value.ToString("yyyy.mm.dd") + "ඞ" + tbTitle.Text + "ඞ" + cbCathegory.Text);
             tbTitle.Text = events[events.Count-1];
-            updateCalendar();
+            events.Sort();
         }
 
-        public void updateCalendar()
+        public static int searchEvent(DateTime searchedDate)
         {
-            for(int i=0; i < events.Count;i++)
+            for(int i=0; i < events.Count; i++)
             {
-                string date = decodeEvents(i)[2] + "." + decodeEvents(i)[1] + "." + decodeEvents(i)[0];
-                mcCalendar.BoldedDates.Append(Convert.ToDateTime(date));
+                if(DateTime.ParseExact(decodeEvents(i)[0],"yyyy.mm.dd") == searchedDate)
+                {
+                    return i;
+                }
+                else if(Convert.ToDateTime(decodeEvents(i)[0]) > searchedDate)
+                {
+                    return -1;
+                }
             }
+            return -1;
         }
 
-        public string[] decodeEvents(int index)
+
+        public static string[] decodeEvents(int index)
         {
-            return events[index].Split ('ඞ');
+            if(events[index] != null)
+            {
+                return events[index].Split ('ඞ');
+            }
+            return null;
         }
     }
 }
