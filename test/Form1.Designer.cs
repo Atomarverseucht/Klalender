@@ -71,25 +71,25 @@
             // tbTitle
             // 
             this.tbTitle.Location = new System.Drawing.Point(230, 529);
-            this.tbTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbTitle.Margin = new System.Windows.Forms.Padding(4);
             this.tbTitle.Name = "tbTitle";
             this.tbTitle.Size = new System.Drawing.Size(380, 31);
             this.tbTitle.TabIndex = 3;
             // 
-            // dtbDate
+            // dtpDate
             // 
             this.dtpDate.CausesValidation = false;
             this.dtpDate.CustomFormat = "";
             this.dtpDate.Location = new System.Drawing.Point(230, 617);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtpDate.Name = "dtbDate";
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(592, 31);
             this.dtpDate.TabIndex = 4;
             // 
             // btSave
             // 
             this.btSave.Location = new System.Drawing.Point(200, 767);
-            this.btSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSave.Margin = new System.Windows.Forms.Padding(4);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(472, 77);
             this.btSave.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             this.cbCathegory.FormattingEnabled = true;
             this.cbCathegory.Location = new System.Drawing.Point(230, 713);
-            this.cbCathegory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCathegory.Margin = new System.Windows.Forms.Padding(4);
             this.cbCathegory.Name = "cbCathegory";
             this.cbCathegory.Size = new System.Drawing.Size(380, 33);
             this.cbCathegory.TabIndex = 6;
@@ -129,7 +129,7 @@
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.mcCalendar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

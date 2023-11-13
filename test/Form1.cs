@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,11 +38,11 @@ namespace test
         {
             for(int i=0; i < events.Count; i++)
             {
-                if(DateTime.ParseExact(decodeEvents(i)[0],"yyyy.mm.dd") == searchedDate)
+                if (DateTime.ParseExact(decodeEvents(i)[0], "yyyy.mm.dd", CultureInfo.InvariantCulture) == searchedDate)
                 {
                     return i;
                 }
-                else if(Convert.ToDateTime(decodeEvents(i)[0]) > searchedDate)
+                else if (DateTime.ParseExact(decodeEvents(i)[0],"yyyy.mm.dd", CultureInfo.InvariantCulture) > searchedDate)
                 {
                     return -1;
                 }

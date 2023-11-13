@@ -88,13 +88,14 @@ namespace test
             for(int i = 1; i <= lastDay; i++)
             {
                 int id = i + startDay;
+		        DateTime dt = Convert.ToDateTime(i.ToString()+"."+month.ToString()+"."+year.ToString());                
                 giveCalendarObject(id).SelectionFont = new Font(giveCalendarObject(id).Font, FontStyle.Bold);
                 giveCalendarObject(id).Text = i.ToString();
-		        DateTime dt = Convert.ToDateTime(i.ToString()+"."+month.ToString()+"."+year.ToString());
+
                 int index = Form1.searchEvent(dt);
                 if(index != -1)
                 {
-                giveCalendarObject(i + startDay).Text = giveCalendarObject(i + startDay).Text + "\n\n moin" ;	
+                    giveCalendarObject(id).Text = giveCalendarObject(id).Text + "\n\n moin" ;	
                 }
             }
         }
@@ -106,7 +107,7 @@ namespace test
             tlpCalendar.Height = this.Height - 150;
         }
     
-        // Ansteuerung der RTBs der Tabelle: Gibt die gewüschte RTB mit der [id] weiter
+        // Ansteuerung der RTBs der Tabelle: Gibt die gewünschte RTB mit der [id] weiter
         public RichTextBox giveCalendarObject(int id)
         {
             switch (id)
