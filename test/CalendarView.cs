@@ -87,6 +87,7 @@ namespace test
             // Durchnummerierung der Monatsansicht
             for(int i = 1; i <= lastDay; i++)
             {
+                //hi
                 int id = i + startDay;
 		        DateTime dt = Convert.ToDateTime(i.ToString()+"."+month.ToString()+"."+year.ToString());                
                 giveCalendarObject(id).SelectionFont = new Font(giveCalendarObject(id).Font, FontStyle.Bold);
