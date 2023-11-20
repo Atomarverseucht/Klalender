@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mcCalendar = new System.Windows.Forms.MonthCalendar();
             this.lbTitle = new System.Windows.Forms.Label();
             this.lbDate = new System.Windows.Forms.Label();
             this.tbTitle = new System.Windows.Forms.TextBox();
@@ -37,16 +36,6 @@
             this.cbCathegory = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // mcCalendar
-            // 
-            this.mcCalendar.CalendarDimensions = new System.Drawing.Size(4, 2);
-            this.mcCalendar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mcCalendar.Location = new System.Drawing.Point(0, 0);
-            this.mcCalendar.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.mcCalendar.Name = "mcCalendar";
-            this.mcCalendar.TabIndex = 0;
-            this.mcCalendar.TodayDate = new System.DateTime(2023, 11, 6, 0, 0, 0, 0);
             // 
             // lbTitle
             // 
@@ -128,7 +117,6 @@
             this.Controls.Add(this.tbTitle);
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbTitle);
-            this.Controls.Add(this.mcCalendar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -139,8 +127,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MonthCalendar mcCalendar;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.Label lbDate;
         private System.Windows.Forms.TextBox tbTitle;
